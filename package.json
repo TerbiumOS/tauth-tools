@@ -1,6 +1,6 @@
 {
 	"name": "@terbiumos/tauth-tools",
-	"version": "1.0.0-alpha",
+	"version": "1.0.0-alpha.2",
 	"description": "Tools to easily integrate authentication via Terbium Cloud in a safe proxied way using libcurl",
 	"repository": {
 		"type": "git",
@@ -11,14 +11,21 @@
 		"check": "biome check . --write",
 		"fmt": "biome format --write ."
 	},
+	"types": "./lib/index.d.ts",
+	"main": "./dist/tauth.js",
+	"files": [
+		"dist",
+		"lib",
+		"src"
+	],
 	"exports": {
 		".": {
 			"import": "./dist/tauth.js",
-			"types": "./dist/index.d.ts"
+			"types": "./lib/index.d.ts"
 		},
 		"./buttons": {
 			"import": "./dist/buttons.js",
-			"types": "./dist/index.d.ts"
+			"types": "./lib/index.d.ts"
 		}
 	},
 	"keywords": [

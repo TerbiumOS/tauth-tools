@@ -1,4 +1,4 @@
-export default function SignInButton(redirURL: string, variant?: "dark" | "light") {
+export function SignInButton(redirURL: string, variant?: "dark" | "light") {
 	if (variant === "dark") {
 		return (
 			<div
