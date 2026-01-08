@@ -20,7 +20,7 @@ export class TAuthTools {
 			},
 		});
 		this.authclient = AuthClient;
-        console.log("[TAUTH] Initialized TAuthTools v" + this.version);
+		console.log("[TAUTH] Initialized TAuthTools v" + this.version);
 	}
 
 	async fetch(url: string | URL | Request, options: any = {}): Promise<Response> {
