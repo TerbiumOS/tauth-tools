@@ -1,0 +1,50 @@
+{
+	"name": "@terbiumos/tauth-tools",
+	"version": "1.0.0-alpha",
+	"description": "Tools to easily integrate authentication via Terbium Cloud in a safe proxied way using libcurl",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/TerbiumOS/tauth-tools.git"
+	},
+	"scripts": {
+		"build": "rspack build --configLoader=native",
+		"check": "biome check . --write",
+		"fmt": "biome format --write ."
+	},
+	"exports": {
+		".": {
+			"import": "./dist/tauth.js",
+			"types": "./dist/index.d.ts"
+		},
+		"./buttons": {
+			"import": "./dist/buttons.js",
+			"types": "./dist/index.d.ts"
+		}
+	},
+	"keywords": [
+		"auth",
+		"terbium",
+		"webos",
+		"oath",
+		"cloud"
+	],
+	"author": "TerbiumOS Development",
+	"license": "Apache-2.0",
+	"bugs": {
+		"url": "https://github.com/TerbiumOS/tauth-tools/issues"
+	},
+	"homepage": "https://github.com/TerbiumOS/tauth-tools#readme",
+	"devDependencies": {
+		"@biomejs/biome": "^2.3.11",
+		"@rspack/cli": "^1.7.1",
+		"@rspack/core": "^1.7.1",
+		"@types/node": "latest",
+		"@types/react": "^19.2.7",
+		"react": "^19.2.3",
+		"typescript": "^5.9.3"
+	},
+	"dependencies": {
+		"better-auth": "^1.4.10",
+		"libcurl.js": "^0.7.4"
+	}
+}
