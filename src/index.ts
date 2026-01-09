@@ -2,6 +2,12 @@ import libcurl from "libcurl.js";
 import { version } from "../package.json";
 import { createAuthClient } from "better-auth/client";
 
+declare global {
+	interface Window {
+		TAuthTools: typeof TAuthTools;
+	}
+}
+
 export class TAuthTools {
 	libcurl: typeof libcurl;
 	version = version;
@@ -97,4 +103,8 @@ export class TAuthTools {
 		});
 		return await response.json();
 	}
+}
+
+if (typeof window !== "undefined") {
+	window.TAuthTools = TAuthTools;
 }
